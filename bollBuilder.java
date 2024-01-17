@@ -58,22 +58,4 @@ public String toString(){
     return "[Ball at (" + x + ", " + y + ") with radius " + r + " and velocity (" + stepX + ", " + stepY + ")]";
 }
 
-// public static void main(String[] args){
-    
-//     BollBuilder ibrahim = new BollBuilder(0.5, 0.5, 0.2, Color.red, 0.1, 0.15);
-//     BollBuilder ibrahim_2 = new BollBuilder(0.5, 0.5, 0.2, 0.1, 0.15);
-
-    
-//         System.out.println(ibrahim);
-//         ibrahim.move();
-//         System.out.println(ibrahim);
-//         ibrahim.draw();
-        
-//         System.out.println(ibrahim_2);
-//         ibrahim_2.bounceY();
-//         System.out.println(ibrahim);
-//         ibrahim_2.draw();
-    
-
-// }
 }
