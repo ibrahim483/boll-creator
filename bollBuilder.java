@@ -28,6 +28,22 @@ public BollBuilder(double cy , double cx, double cr, double mox, double moy){
     stepX = mox;
     stepY = moy;
 }
+public boolean collideWith(BollBuilder other) {
+    double distance = Math.sqrt(Math.pow((x - other.x), 2) + Math.pow((y - other.y), 2));
+    return distance <= (r + other.r);
+}
+
+public void handleCollision(BollBuilder other) {
+    // Adjust velocities to simulate bouncing away
+    double tempStepX = stepX;
+    double tempStepY = stepY;
+
+    stepX = other.stepX;
+    stepY = other.stepY;
+
+    other.stepX = tempStepX;
+    other.stepY = tempStepY;
+}
 
 public void draw() {
     StdDraw.setPenColor(color);

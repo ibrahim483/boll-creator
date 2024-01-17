@@ -18,6 +18,10 @@ public class AnimateBoll {
             if(boll_2.collideX(10) || boll_2.collideX(-10)){boll_2.bounceX();}
             if(boll_2.collideY(10) || boll_2.collideY(-10)){boll_2.bounceY();}
 
+            if (boll_1.collideWith(boll_2)) {
+                boll_1.handleCollision(boll_2);
+            }
+
             boll_1.move();
             boll_2.move();
 
@@ -32,18 +36,7 @@ public class AnimateBoll {
             
             StdDraw.pause(20);
             
-        //     boll_1.move();
-        //     if (boll_1.collideY(10) || boll_1.collideY(-10)) {
-        //         boll_1.bounceY(); // Add this line to bounce in the y-direction
-        //     }
-        //     if (boll_1.collideX(-10) || boll_1.collideX(10)) {
-        //         boll_1.bounceX(); // Add this line to bounce in the x-direction
-        //     }
-        //     StdDraw.clear();
-        //     boll_1.draw();
-        //     StdDraw.show();
-        //     StdDraw.pause(100);
-        // }
+
     }
 }
 }
