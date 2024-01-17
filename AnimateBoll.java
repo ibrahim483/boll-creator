@@ -6,7 +6,7 @@ public class AnimateBoll {
         StdDraw.setXscale(-10, 10);
         StdDraw.setYscale(-10, 10); // Fix: Use setYscale to set the y-axis scale
         BollBuilder boll_1 = new BollBuilder(0, 0, 1, Color.red, 0.5, 0.5);
-        BollBuilder boll_2 = new BollBuilder(0, 0.5, 1,5,5);
+        BollBuilder boll_2 = new BollBuilder(0, 0.5, 1,0.5,0.5);
 
         StdDraw.enableDoubleBuffering();
 
@@ -20,10 +20,15 @@ public class AnimateBoll {
 
             boll_1.move();
             boll_2.move();
+
             StdDraw.clear();
             boll_1.draw();
             boll_2.draw();
+
             StdDraw.show();
+            System.out.println(boll_1.toString());
+            System.out.println(boll_2.toString());
+            
             StdDraw.pause(20);
             
         //     boll_1.move();

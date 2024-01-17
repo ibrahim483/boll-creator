@@ -36,8 +36,8 @@ public void draw() {
 
 
 public void move(){
-    y = (y + stepY);
-    x = (x + stepX);
+    y = y + stepY;
+    x = x + stepX;
 
 }
 
@@ -52,7 +52,7 @@ return Math.abs(x + stepX) + r > Math.abs(xBorder);
 }
 public boolean collideY(double yBorder){
     return Math.abs(y + stepY) + r > Math.abs(yBorder);
-
+    
 }
 public String toString(){
     return "[Ball at (" + x + ", " + y + ") with radius " + r + " and velocity (" + stepX + ", " + stepY + ")]";
